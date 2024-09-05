@@ -136,7 +136,7 @@
   "testPresets": [
     {
       "name": "default",
-      "hidden":  true,
+      "hidden": true,
       "output": {
         "outputOnFailure": true
       },
@@ -149,6 +149,7 @@
       "name": "x86-debug",
       "displayName": "x86 debug",
       "configurePreset": "x86-debug",
+      "configuration": "Debug",
       "inherits": [
         "default"
       ]
@@ -157,6 +158,7 @@
       "name": "x86-release",
       "displayName": "x86 release",
       "configurePreset": "x86-release",
+      "configuration": "Release",
       "inherits": [
         "default"
       ]
@@ -165,6 +167,7 @@
       "name": "x64-debug",
       "displayName": "x64 debug",
       "configurePreset": "x64-debug",
+      "configuration": "Debug",
       "inherits": [
         "default"
       ]
@@ -173,6 +176,7 @@
       "name": "x64-release",
       "displayName": "x64 release",
       "configurePreset": "x64-release",
+      "configuration": "Release",
       "inherits": [
         "default"
       ]
