@@ -3,7 +3,7 @@
 include(CTest)
 include(GoogleTest)
 
-set(TEST_TARGET tests)
+set(TEST_TARGET TestExpected)
 
 add_executable(${TEST_TARGET} "main.cpp" "include/gtest.h" "test_expected.cpp")
 

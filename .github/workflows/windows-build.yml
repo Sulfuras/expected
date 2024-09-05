@@ -41,9 +41,3 @@ jobs:
 
       - name: test
         run: ctest --preset x64-debug
-
-      #- name: Install WiX
-      #  run: dotnet tool install --global wix
-
-      #- name: Build WiX on Windows
-      #  run: wix build .\nexus.wxs
