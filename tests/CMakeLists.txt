@@ -3,21 +3,19 @@
 include(CTest)
 include(GoogleTest)
 
-set(TEST_TARGET TestExpected)
+add_executable(test_expected "main.cpp" "include/gtest.h" "test_expected.cpp")
 
-add_executable(${TEST_TARGET} "main.cpp" "include/gtest.h" "test_expected.cpp")
+target_include_directories(test_expected PUBLIC include)
 
-target_include_directories(${TEST_TARGET} PUBLIC include)
+target_link_libraries(test_expected PRIVATE gtest_main)
+target_link_libraries(test_expected PRIVATE GTest::gmock_main)
+target_link_libraries(test_expected PRIVATE GTest::gmock)
 
-target_link_libraries(${TEST_TARGET} PRIVATE gtest_main)
-target_link_libraries(${TEST_TARGET} PRIVATE GTest::gmock_main)
-target_link_libraries(${TEST_TARGET} PRIVATE GTest::gmock)
+target_link_libraries(test_expected PRIVATE expected)
 
-target_link_libraries(${TEST_TARGET} PRIVATE Expected)
-
-gtest_discover_tests(${TEST_TARGET}
+gtest_discover_tests(test_expected
     DISCOVERY_MODE PRE_TEST
-    WORKING_DIRECTORY $<TARGET_FILE_DIR:${TEST_TARGET}>)
+    WORKING_DIRECTORY $<TARGET_FILE_DIR:test_expected>)
 
-#project(${TEST_TARGET} LANGUAGES CXX)
+#project(test_expected LANGUAGES CXX)
 #set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)

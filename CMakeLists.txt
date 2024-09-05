@@ -54,11 +54,11 @@ endif()
 #endif()
 
 # Meta information about the project
-set(META_PROJECT_NAME "Expected")
+set(META_PROJECT_NAME "expected")
 set(META_PROJECT_DESCRIPTION "std::expected implementation")
 set(META_AUTHOR_ORGANIZATION "Sulfuras")
-set(META_GITHUB_REPO "https://github.com/Sulfuras/Expected")
-set(META_AUTHOR_DOMAIN "https://github.com/Sulfuras/Expected")
+set(META_GITHUB_REPO "https://github.com/Sulfuras/expected")
+set(META_AUTHOR_DOMAIN "https://github.com/Sulfuras/expected")
 set(META_AUTHOR_MAINTAINER "Sulfuras")
 set(META_VERSION_MAJOR "1")
 set(META_VERSION_MINOR "0")
@@ -127,7 +127,7 @@ cpmaddpackage(
 # Top level code generation
 # ------------------------------------------------------------------------------
 
-configure_file(${PROJECT_SOURCE_DIR}/include/version.h.in ${PROJECT_SOURCE_DIR}/include/Expected/version.h)
+configure_file(${PROJECT_SOURCE_DIR}/include/version.h.in ${PROJECT_SOURCE_DIR}/include/expected/version.h)
 
 # ------------------------------------------------------------------------------
 # Project modules
